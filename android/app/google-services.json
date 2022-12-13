@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584874615729",
+    "project_id": "todo-app-siliconvillage",
+    "storage_bucket": "todo-app-siliconvillage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584874615729:android:83731386503d97f4dc5390",
+        "android_client_info": {
+          "package_name": "com.example.todo_app_siliconvillage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584874615729-cukv6aua28rfnkohvjsa7b98pv3vm0mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2r7d0632HQ_hKMmDVmSWfbBFa6Jv88Us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584874615729-cukv6aua28rfnkohvjsa7b98pv3vm0mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
