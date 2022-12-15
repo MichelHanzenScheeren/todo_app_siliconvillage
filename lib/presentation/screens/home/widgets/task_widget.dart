@@ -18,7 +18,13 @@ class TaskWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () => Get.toNamed(AppRoutes.taskScreen, arguments: task),
+      onTap: () async {
+        final result = await Get.toNamed(
+          AppRoutes.taskScreen,
+          arguments: task,
+        );
+        homeController.updateTask(index, result);
+      },
       title: Text(
         task.title,
         style: TextStyle(

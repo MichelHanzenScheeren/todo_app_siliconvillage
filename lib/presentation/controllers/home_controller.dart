@@ -33,7 +33,7 @@ class HomeController extends GetxController {
   void orderTasks() {
     tasks.sort((t1, t2) {
       if ((t1.checked && t2.checked) || (!t1.checked && !t2.checked)) {
-        return t1.updatedDate.compareTo(t2.updatedDate);
+        return t2.updatedDate.compareTo(t1.updatedDate);
       } else if (!t1.checked && t2.checked) {
         return -1;
       } else {
@@ -75,5 +75,12 @@ class HomeController extends GetxController {
       (left) => print(left),
       (right) => orderTasks(),
     );
+  }
+
+  void updateTask(int index, Task? newTask) {
+    if (newTask != null) {
+      tasks[index] = newTask;
+      orderTasks();
+    }
   }
 }
