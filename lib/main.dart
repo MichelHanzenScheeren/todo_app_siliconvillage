@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app_siliconvillage/shared/bindings.dart';
 import 'package:todo_app_siliconvillage/shared/routes.dart';
-import 'presentation/screens/home_screen.dart';
+import 'presentation/screens/home/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 

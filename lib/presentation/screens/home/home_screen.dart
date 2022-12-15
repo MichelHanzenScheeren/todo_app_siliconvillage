@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app_siliconvillage/presentation/controllers/home_controller.dart';
-import 'package:todo_app_siliconvillage/presentation/widgets/bottom_form_widget.dart';
+import 'package:todo_app_siliconvillage/presentation/screens/home/widgets/bottom_form_widget.dart';
 import 'package:todo_app_siliconvillage/presentation/widgets/progress_widget.dart';
-import 'package:todo_app_siliconvillage/presentation/widgets/task_widget.dart';
+import 'package:todo_app_siliconvillage/presentation/screens/home/widgets/task_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   final homeController = Get.find<HomeController>();
