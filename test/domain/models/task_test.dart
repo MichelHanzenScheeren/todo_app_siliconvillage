@@ -62,7 +62,7 @@ main() {
       expect(task.checked, true);
     });
     test('Update de título e descrição', () {
-      task.updateTask('Título', 'Descrição');
+      task.updateTask(newTitle: 'Título', newDescription: 'Descrição');
       expect(task.title, 'Título');
       expect(task.description, 'Descrição');
     });

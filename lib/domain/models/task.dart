@@ -23,9 +23,9 @@ class Task {
     updatedDate = updated ?? DateTime.now();
   }
 
-  void updateTask(String newTitle, String newDescription) {
-    title = newTitle;
-    description = newDescription;
+  void updateTask({String? newTitle, String? newDescription}) {
+    title = newTitle ?? title;
+    description = newDescription ?? description;
     updatedDate = DateTime.now();
   }
 
