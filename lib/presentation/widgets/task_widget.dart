@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app_siliconvillage/domain/models/task.dart';
 import 'package:todo_app_siliconvillage/presentation/controllers/home_controller.dart';
+import 'package:todo_app_siliconvillage/shared/routes.dart';
 
 class TaskWidget extends StatelessWidget {
   final Task task;
@@ -17,6 +18,7 @@ class TaskWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () => Get.toNamed(AppRoutes.taskScreen, arguments: task),
       title: Text(
         task.title,
         style: TextStyle(

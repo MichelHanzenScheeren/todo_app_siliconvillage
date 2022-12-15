@@ -25,7 +25,9 @@ class HomeScreen extends StatelessWidget {
               itemCount: homeController.tasks.length,
               itemBuilder: (context, index) {
                 return TaskWidget(
-                    task: homeController.tasks[index], index: index);
+                  task: homeController.tasks[index],
+                  index: index,
+                );
               },
               separatorBuilder: (context, index) {
                 return const Divider(
