@@ -29,5 +29,8 @@ class Task {
     updatedDate = DateTime.now();
   }
 
-  void toggleTask() => checked = !checked;
+  void toggleTask() {
+    checked = !checked;
+    updatedDate = DateTime.now();
+  }
 }
