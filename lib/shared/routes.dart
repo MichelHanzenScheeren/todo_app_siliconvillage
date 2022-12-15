@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:todo_app_siliconvillage/presentation/screens/home/home_screen.dart';
-import 'package:todo_app_siliconvillage/presentation/screens/task_screen.dart';
+import 'package:todo_app_siliconvillage/presentation/screens/task/task_screen.dart';
 
 class AppRoutes {
   static const homeScreen = '/';
