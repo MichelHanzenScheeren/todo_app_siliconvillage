@@ -21,20 +21,30 @@ class HomeScreen extends StatelessWidget {
           return Visibility(
             visible: !homeController.isLoading.value,
             replacement: const ProgressWidget(),
-            child: ListView.separated(
-              itemCount: homeController.tasks.length,
-              itemBuilder: (context, index) {
-                return TaskWidget(
-                  task: homeController.tasks[index],
-                  index: index,
-                );
-              },
-              separatorBuilder: (context, index) {
-                return const Divider(
-                  color: Colors.grey,
-                  height: 0,
-                );
-              },
+            child: Visibility(
+              visible: homeController.tasks.isNotEmpty,
+              replacement: const Center(
+                child: Text(
+                  'Nada para fazer por enquanto...',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              child: ListView.separated(
+                padding: const EdgeInsets.only(bottom: 80),
+                itemCount: homeController.tasks.length,
+                itemBuilder: (context, index) {
+                  return TaskWidget(
+                    task: homeController.tasks[index],
+                    index: index,
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const Divider(
+                    color: Colors.grey,
+                    height: 0,
+                  );
+                },
+              ),
             ),
           );
         }),
