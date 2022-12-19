@@ -40,7 +40,7 @@ main() {
         title: 'Teste',
         description: 'Meu teste',
         checked: true,
-        created: DateTime(2022, 1, 1));
+        createdDate: DateTime(2022, 1, 1));
     test('ID passado deve ser mantido', () {
       expect(task.id, '12345678912345678912');
     });

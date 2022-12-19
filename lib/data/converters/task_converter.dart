@@ -13,8 +13,8 @@ class TaskConverter {
       title: map[titleKey],
       description: map[descriptionKey],
       checked: map[checkedKey],
-      created: DateTime.parse(map[createdKey].toDate().toString()),
-      updated: DateTime.parse(map[updatedKey].toDate().toString()),
+      createdDate: DateTime.parse(map[createdKey].toDate().toString()),
+      updatedDate: DateTime.parse(map[updatedKey].toDate().toString()),
     );
   }
 
