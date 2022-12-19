@@ -17,13 +17,28 @@ class Text {
   }
 
   List<String> getNumbers(String text) {
-    List<String> splitText = text.replaceAll('\n', '').split(" ");
+    List<String> splitText = prepareText(text);
     List<String> filteredText = [];
     final myRegex = RegExp(r'^[0-9]+$');
     for (var element in splitText) {
       if (myRegex.hasMatch(element)) filteredText.add(element);
     }
     return filteredText;
+  }
+
+  List<String> prepareText(String text) {
+    text = text.replaceAll(',', '');
+    text = text.replaceAll('.', '');
+    text = text.replaceAll(':', '');
+    text = text.replaceAll(';', '');
+    text = text.replaceAll('?', '');
+    text = text.replaceAll('!', '');
+    text = text.replaceAll('-', '');
+    text = text.replaceAll('\n', ' ');
+    text = text.replaceAll('  ', ' ');
+    text.trim();
+    text = text.trim();
+    return text.split(" ");
   }
 
   List<String> getWordsFromNumbers(List<String> stringNumbers) {

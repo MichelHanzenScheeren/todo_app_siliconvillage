@@ -29,6 +29,15 @@ main() {
     });
   });
 
+  group('Teste prepareText - remover sinais especiais', () {
+    test('Testando com quebra de linha', () {
+      expect(Text('').prepareText('meu\n teste'), ['meu', 'teste']);
+    });
+    test('Testando com quebra e pontuação', () {
+      expect(Text('').prepareText('meu\n teste.\n'), ['meu', 'teste']);
+    });
+  });
+
   group('Teste getSubstrings', () {
     test('Testando com um único número', () {
       expect(Text('').getSubstrings('1'), ['1']);
